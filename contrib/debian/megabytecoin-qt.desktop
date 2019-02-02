@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MegaByteCoin
+Comment=MegaByteCoin P2P Cryptocurrency
+Comment[fr]=MegaByteCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MegaByteCoin, eşten eşe kriptografik sanal para birimi
+Exec=megabytecoin-qt %u
+Terminal=false
+Type=Application
+Icon=megabytecoin128
+MimeType=x-scheme-handler/megabytecoin;
+Categories=Office;Finance;

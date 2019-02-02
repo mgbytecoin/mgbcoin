@@ -1,0 +1,26 @@
+[Unit]
+Description=MegaByteCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=megabytecoin
+Group=megabytecoin
+
+Type=forking
+PIDFile=/var/lib/megabytecoind/megabytecoind.pid
+
+ExecStart=/usr/bin/megabytecoind -daemon -pid=/var/lib/megabytecoind/megabytecoind.pid \
+          -conf=/etc/megabytecoin/megabytecoin.conf -datadir=/var/lib/megabytecoind
+
+ExecStop=-/usr/bin/megabytecoin-cli -conf=/etc/megabytecoin/megabytecoin.conf \
+         -datadir=/var/lib/megabytecoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

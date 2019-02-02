@@ -1,0 +1,26 @@
+# /etc/conf.d/megabytecoind: config file for /etc/init.d/megabytecoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/megabytecoin/megabytecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/megabytecoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/megabytecoind.pid"
+
+# Where to write megabytecoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/megabytecoind"
+
+# User and group to own megabytecoind process
+#BITCOIND_USER="megabytecoin"
+#BITCOIND_GROUP="megabytecoin"
+
+# Path to megabytecoind executable
+#BITCOIND_BIN="/usr/bin/megabytecoind"
+
+# Nice value to run megabytecoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
